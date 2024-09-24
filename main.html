@@ -4,57 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Call Stack Simulation</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        #output {
-            border: 1px solid black;
-            padding: 10px;
-            width: 300px;
-            height: 300px;
-            overflow-y: auto;
-            white-space: pre-wrap;
-        }
-    </style>
+   
 </head>
 <body>
 
     <h1>JavaScript Call Stack Simulation</h1>
     <div id="output"></div>
 
-    <script type="text/javascript">
-        // Function to log the current call stack simulation
-        function logOutput(message) {
-            const outputDiv = document.getElementById('output');
-            outputDiv.textContent += message + '\n';
-        }
-
-        // Function 1
-        function firstFunction() {
-            logOutput("Call: firstFunction() -> Adding firstFunction to the stack");
-            secondFunction();
-            logOutput("Return: firstFunction() -> Removing firstFunction from the stack");
-        }
-
-        // Function 2
-        function secondFunction() {
-            logOutput("Call: secondFunction() -> Adding secondFunction to the stack");
-            thirdFunction();
-            logOutput("Return: secondFunction() -> Removing secondFunction from the stack");
-        }
-
-        // Function 3
-        function thirdFunction() {
-            logOutput("Call: thirdFunction() -> Adding thirdFunction to the stack");
-            logOutput("Return: thirdFunction() -> Removing thirdFunction from the stack");
-        }
-
-        // Start the execution
-        logOutput("Starting execution -> Adding main to the stack");
-        firstFunction();
-        logOutput("Program finished -> Removing main from the stack");
-    </script>
 
 </body>
 </html>
